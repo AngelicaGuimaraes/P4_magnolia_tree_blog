@@ -8,6 +8,7 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Category(models.Model):
     """
     Model for categories for blogposts stating category of

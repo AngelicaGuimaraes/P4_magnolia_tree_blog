@@ -39,10 +39,8 @@
 
 ## Project Purpose
 #
-(Taken from Assessment Handbook provided by Code Institute)
-#
 - Project purpose:
-  In this project, you'll build a Full-Stack site based on business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
+  The purpose of this project was to build a Full-Stack site based on business logic used to control a centrally-owned dataset. Also, set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
 #
 ## Learning Outcomes
 - Use an Agile methodology to plan and design a Full-Stack Web application using an MVC framework and related contemporary technologies.

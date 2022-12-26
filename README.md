@@ -45,7 +45,10 @@ A live version of this project can be found at this url: https://magnolia-tree.h
     + [Delete Like](#delete-like "Delete Like")
     + [Search Content by Category](#search-content-by-category "Search Content by Category")
     + [Search Content by Section](#search-content-by-section "Search Content by Section")
-  + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
+    + [Site Admin Features](#site-admin-features "Site Admin Features")
+    + [Approve Post](#approve-post "Approve Post")
+    + [Delete Content](#delete-content "Delete Content")
+  + [Features Left to be Implemented](#features-left-to-be-implemented "Features Left to be Implemented")
 + [Languages used](#languages-used "Languages used")
   + [Frameworks and libraries and tools](#frameworks-and-libraries-and-tools "Frameworks and libraries and tools")
   + [Installed packages](#installed-packages "Installed packages") 
@@ -206,21 +209,27 @@ Delete anyone's content at any time
 
 ![Search Content by Section](image)
 
-#### Course Admin Features
+#### Site Admin Features
 
-Course administrators can do all the features as mentors in front-end. The course administrators use the django admin pane in this mvp for student and mentor creation. They also use the admin pane for pairing of students and mentors by creating a student-mentor-card.
+Site Admins can perform all the features as the Users plus publishing the posts and comments that have been written by users and are awaiting for approaval to go online.
 
-## Features Left to Implement
+![Approve Post](image)
 
-Following features are planned_
+Site Admins can also delete any content, previously approved and published, at any time.
 
- - Password reset function using email
- - Export of time report as csv
- - Registration function for students
- - Front end for Course administrators
- - File repository for upload on student profiles
+![Delete Content](image)
 
-[Back to top](#ms-dashboard)
+## Features Left to be Implemented
+
+Following features are planned
+
+ - Social Media Sharing
+ - Related Posts
+ - Featured Posts
+ - Author Bio
+ - Newsletter signup
+
+[Back to top](#magnolia-tree-blog)
 
 ## Languages used
 
@@ -242,21 +251,15 @@ Following features are planned_
 
 ### Installed packages
 
- - asgiref==3.5.2
- - cloudinary==1.29.0
- - dj-database-url==0.5.0
+ - asgiref==3.6.0
+ - cloudinary==1.30.0
+ - dj-database-url==1.2.0
  - dj3-cloudinary-storage==0.0.6
- - Django==3.2.13
- - django-allauth==0.51.0
- - django-crispy-forms==1.14.0
+ - Django==3.2.16
  - gunicorn==20.1.0
- - oauthlib==3.2.0
- - psycopg2==2.9.3
- - PyJWT==2.4.0
- - python3-openid==3.2.0
- - pytz==2022.1
- - requests-oauthlib==1.3.1
- - sqlparse==0.4.2
+ - psycopg2==2.9.5
+ - pytz==2022.7
+ - sqlparse==0.4.3
 
 ## Testing 
 

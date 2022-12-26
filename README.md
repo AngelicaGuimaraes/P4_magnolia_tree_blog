@@ -1,151 +1,351 @@
 # Magnolia Tree Blog
 
-![Am I Responsive](/media/amiresponsive.png)
-## Navigation Through Content
-#
-* [Deployed page](https://the-green-thumb.herokuapp.com/)
-* [Project Purpose](#project-purpose)
-    - [Learning Outcomes](#learning-outcomes)
-    - [Project Requirements](#project-requirements)
-* [Initial Planning](/deployment.md)
-* [User Experience](#user-experience-ux)
-    - [Demographics](#demographics)
-    - [User Goal](#user-goals)
-* [Features](/features.md)
-   - [Existing features](/features.md#existing-features)
-   - [Possible improvements](/features.md#features-left-to-implement)
-* [Testing](/testing.md)
-    - [Validator Testing](/testing.md#validator-testing)
-    - [Manual testing](/testing.md#manual-testing)
-    - [Automated Testing](/testing.md#automated-testing)
-* [Bugs](/bugs.md)
-* [Deployment](/deployment.md)
-* [Credits](#credits)
-    - [Mentoring](#mentoring)
-    - [Content credits](#content-credits)
-    - [Media](/credits.md)
-      -[Blog Content credits](/credits.md#blog-content-credits)
-        - [Why Soil Matters](/credits.md#why-soil-matters)
-        - [How to grow tomatoes](/credits.md#how-to-grow-tomatoes)
-        - [How to grow carrots](/credits.md#how-to-grow-carrots)
-        - [The humble potatoe](/credits.md#the-humble-potatoe)
-        - [The frail but worth it salad](/credits.md#the-frail-but-worth-it-salad)
-        - [The hearty onion](/credits.md#the-hearty-onion)
-        - [The plump Bell Pepper](/credits.md#the-plump-bell-pepper)
-     - [Image Credits](/credits.md#image-credits)
-        - [About us picture](/credits.md#about-us-picture)
-        - [Favicons](/credits.md#favicons)
-        - [Creation Credits](/credits.md#creation-credits)
+![Responsive screenshot](/media/images-readme/00-readme-responsive-image.png)
 
-## Project Purpose
-#
-- Project purpose:
-  The purpose of this project was to build a Full-Stack site based on business logic used to control a centrally-owned dataset. Also, set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
-#
-## Learning Outcomes
-- Use an Agile methodology to plan and design a Full-Stack Web application using an MVC framework and related contemporary technologies.
-- - [see User goals](#user-goals)
-- - [Checklist in deployment](/deployment.md)
-- Implement a data model, application features and business logic to manage, query and manipulate data to meet given needs in a particular real-world domain.
-- - [see Features](/features.md)
-- Identify and apply authorisation, authentication and permission features in a Full-Stack web application solution.
-- - [see Features](/features.md)
-- Create manual and/or automated tests for a Full-Stack Web application using an MVC framework and related contemporary technologies.
-- - [see Testing](/testing.md)
-- Use a distributed version control system and a repository hosting service to document, develop and maintain a Full-Stack Web application using an MVC framework and related contemporary technologies.
-- - [GitHub](https://github.com)
-- Deploy a Full-Stack Web application using an MVC framework and related contemporary technologies to a cloud-based platform.
-- - [Heroku](https://www.heroku.com/)
-- Understand and use object-based software concepts
-- - [see Features](/features.md)
+# The purpose with this project
 
-#
-## Technologies and Libraries used
+Magnolia Tree Blog is a tool that was added to my first milestone project for CI with the purpose of enriching the expirience of the users of the web site Magnolia Tree. Magnolia Tree Blog was developed as a student project for the Code Institute Full Stack Program. Magnolia Tree Blog offers users a way to share their experiences in relation to yoga and learn more about different contents from other user's posts. It also allows them to comment and like posts, as well as seeing other user's comments and likes so they can interact on conversations.
 
-### Languages used
-- [Django](https://www.djangoproject.com/) 
+All comments and post that are created by users, need to be revewed and published by the Admin of the site, so no information that goes against the site's regulations and rules goes published unallowed.
 
-- [HTML](https://www.w3schools.com/html/html_intro.asp)
+Required technologies for this project: 
 
-- [CSS](https://www.w3schools.com/css/css_intro.asp)
+ - HTML, CSS, JavaScript, Python+Django
+ - Relational database
 
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+A live version of this project can be found at this url: https://magnolia-tree.herokuapp.com/
 
-### Databases
-- [Postgresql](https://www.postgresql.org/)
-- - As database in Heroku
-- [SQLite](https://www.sqlite.org/index.html)
-- - As database for Gitpod, the initial thought was to use this for unittest.
-  The setting is left as part of future features, to have automatic testing instead of manual testing
+# Table of Content
 
-### Frameworks and tools
-- [Bootstrap](https://getbootstrap.com/)
-- [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
-- [Summernote](https://summernote.org/)
-- [Fontawesome](https://fontawesome.com/)
-- [Django-Crispyforms](https://django-crispy-forms.readthedocs.io/en/latest/)
-- [Django-Copyright](https://pypi.org/project/django-copyright/)
-- [Google fonts](https://fonts.google.com/specimen/Playfair+Display?category=Serif,Sans+Serif#standard-styles)
++ [UX](#ux "UX")
+  + [User Demographic](#user-demographic "User Demographic")
+  + [User Goals](#user-goals "User goals")
+  + [User Stories](#user-stories "User Stories")
+    + [Site User](#site-user "Site User")
+    + [Site User / Admin](#site-user-admin "Site User / Admin")
+    + [Site Admin](#site-admin "Site Admin")
+  + [Project Purpose](#project-purpose "Project Purpose")
+  + [Design diagram](#design-diagram "Design diagram")
+  + [Site Navigation](#site-navigation "Site Navigation")
+  + [Database schema](#database-schema "Database schema")
++ [Features](#features "Features")
+  + [Existing Features](#existing-features "Existing Features")
+    + [Sign In](#sign-in "Sign In")
+    + [List of students](#list-of-students "List of students")
+    + [Student details](#student-details "Student details")
+    + [List of sessions](#List-of-sessions "List of sessions")
+    + [Create session](#create-session "Create session")
+    + [Session details](#session-details "Session details")
+    + [Edit session](#edit-session "Edit session")
+    + [Delete session](#delete-session "delete-session")
+    + [Create note](#create-note "Create Note")
+    + [Search student](#search-student "Search Student")
+    + [Search results](#search-results "Search Results")
+    + [Time Report](#time-report "Time Report")
+    + [Course Admin Features](#course-admin-features "Course Admin Features")
+  + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
++ [Languages used](#languages-used "Languages used")
+  + [Frameworks and libraries and tools](#frameworks-and-libraries-and-tools "Frameworks and libraries and tools")
+  + [Installed packages](#installed-packages "Installed packages") 
++ [Testing](#testing "Testing")
+  + [Bugs during development](#bugs-during-development "Bugs during development")
+  + [Validator Testing](#validator-testing "Validator Testing")
+  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
++ [Deployment](#deployment "deployment")
++ [Content](#content "Content")
++ [Credits](#credits "Credits")
 
-### Cloud storage and deployment services
-- [Cloudinary](https://cloudinary.com/)
-- [Heroku](https://www.heroku.com/)
-- [Gunicorn](https://gunicorn.org/)
+## UX
+
+### User Demographic
+
+This application is ment for:
+ - All users who want to read about different categories of yoga.
+ - All users who want to write about their own experiences in relation to yoga.
+ - All users who want to comment on posts that are published on the blog page.
+ - All users who want to like someone's post.
+ - All site admins who want to share content with the site users.
+ - All site admins who want to control what has been writen and commented.
+ - All site admins who want to allow and publish what users have written or commented.
+
+### User Goals
+
+To have all publications and everything else related to it stored in one place so that the users and admins can access easily whenever wanted or necessary.
+To have a good overview of all posts, comments, likes and interactions.
+
+### User Stories
+
+The following user stories has been implemented in the project. User Stories are based on two types of users, the site user and the admin. More user stories will be implemented in future versions.
+
+#### Site User
+
+As a **site user** I can **view a list of posts** so that **I can select one to read**
+
+As a **site user** I can **click on a post** so that **I can read the full text**
+
+As a **site user** I can **register an account** so that **I can comment and like posts**
+
+As a **site user** I can **leave comments, edit and delete comments, on a post** so that **I can be involved in the conversation**
+
+As a **site user** I can **like or unlike a post** so that **I can interact with the content**
+
+As a **site user** I can **create draft posts** so that **I can finish writing the content later**
+
+As a **site user** I can **I can upload images to my posts** so that **I can make the content more attractive**
+
+#### Site User / Admin
+
+As a **site user/admin** I can **view the number of likes on each post** so that **I can see which one is the most popular or viral**
+
+As a **site user/admin** I can **view comments on an individual post** so that **I can read the conversation**
+
+#### Site Admin
+
+As a **site admin** I can **create, read, update and delete posts** so that **I can manage my blog content**
+
+As a **site admin** I can **approve or disapprove comments** so that **I can filter out objectionable comments**
+
+### Project Purpose
+
+From Code Institutes assessment guide:
+
+In this project, you'll build a Full-Stack site based on business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
 
 
-## Initial planning
-#
-### Initial plan
-- In the intial meeting there was three ideas. Recipe website, Garden blog and Car Dealship. Two rough wireframes where created.
-#
-Wireframe 1                                         | Wireframe 2
-:--------------------------------------------------: | :--------------------------------------------------:
- ![Wireframe 1](/media/wireframe.png)                | ![Wireframe 2](/media/wireframe_2.png)
-#
-### Plan
-- it was decided to build a Garden blog, so a rough sketch of a garden blog with inspiration from existing blogs where made. 
-  Please visit [credits to see the inspiration used](/credits.md)
-#
- Home Page                                            | Blogpost page
-:---------------------------------------------------: | :--------------------------------------------------:
- ![Rough sketch of Garden blog](/media/front_page.png)|  ![Rough sketch of blogpost page](/media/post_page.png)
-#
+### Design diagram
 
-## User Experience (UX)
-#
-## Demographics
-- People who want to know more about gardening and adjancent subject.
+The idea of Magnolia Tree Blog was to follow the same design concepts as the Magnolia Tree web page.
+Focusing on the data and the CRUD was the initial intention and using Bootstrap as much as possible. The initial design templates was very simple. Focus was to be able to incoorporate all the user stories in a clean, neat and functional way.
 
-## User Goals
-#
-- As a Site User I can view a list of posts so that I can select one to read
-- As a Site User I can click on a post so that I can read the full text
-- As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral
-- As a Site User / Admin I can view comments on an individual post so that I can read the conversation
-- As a Site User I can register an account so that I can comment and like
-- As a Site User I can leave comments, edit and delete comments, on a post so that I can be involved in the conversation
-- As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
-- As a Site Admin I can create draft posts so that I can finish writing the content later
-- As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
-- As a Content Creator I can upload more then one image so that I can have multiple images in a carousel
+![Wireframe1](static/images-readme/wire1.png)
+![Wireframe2](static/images-readme/wire2.png)
+![Wireframe3](static/images-readme/wire3.png)
 
-## Credits
-#
-## Thank you
-- [Spencer Barriball](https://github.com/5pence) for always being there and being a fantastic mentor.
-- [Daisy McGirr](https://github.com/Daisy-McG) for helping me and giving me insights into backend cooperation with frontend, helping me with some debugs and lessons around django.
-- [Bim Williams](https://github.com/MrBim) for being a good person to talk to, and for supplying link to API to render content into a downloadable PDF.
+### Site navigation
 
-### Content credits
-- This project is modelled and followed using the "I Think Therefore I Blog" [walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/), produced by Matt Rudge at Code Institute. Using this allowed me to focus on understanding the concepts instead of inventing the wheel with every line of code I produce.
-- Another source used in this project is [Djanogcentral](https://djangocentral.com/building-a-blog-application-with-django/). Wherever code from this walkthrough is used, there is credit given in that file.
-- To upload multiple images I took a lot of inspiration from a content creator on Youtube called [The Pylot](https://www.youtube.com/watch?v=-0nYBqY9i5w), my code is not a copy paste of his, but I used his video as a stepping stone to get functionality for my Carousels. I also used docs from [Cloudinary](https://cloudinary.com/documentation/django_image_and_video_upload).
-- For the alt_tags a line of code from a question on [StackOverflow](https://stackoverflow.com/questions/65415221/best-method-to-store-alt-tags-in-django) was used.
+![Site navigation](static/images-readme/sitenav.png)
 
-### Media
-- For how to make the README nav-bar https://github.com/artkonekt/menu/blob/master/README.md was used.
-- As template for README https://github.com/mikakallberg/readme-template/blob/master/README.md was used.
+### Database ERD
 
-#
-* [Back to top](#the-green-thumb)
-#
+![Schema](/media/images-readme/ERD.png)
+
+[Back to top](#ms-dashboard)
+
+## Features 
+
+Mdash consists of two main features for Mentors:
+
+Add information regarding a student
+Add information regarding a session with a student
+
+Course administrators main features are:
+
+Add a mentor
+Add a student
+Pair a mentor and a student
+Take part of information from mentors
+
+### Existing Features
+
+#### Sign In
+
+![Sign in](static/images-readme/signin.png)
+
+#### List of students
+
+![List of students](static/images-readme/listofstudents.png)
+
+#### Student details
+
+![Student details](static/images-readme/detailsstudent.png)
+![Student details 2](static/images-readme/detailsstudent2.png)
+
+#### List of sessions
+
+![List of sessions](static/images-readme/listofsessions.png)
+
+#### Create session
+
+![Create Session](static/images-readme/createsession.png)
+
+#### Session details
+
+![Session Details](static/images-readme/detailsession.png)
+![Session Details2](static/images-readme/summarysession.png)
+
+#### Edit session
+
+![Edit session](static/images-readme/editsession.png)
+
+#### Delete session
+
+![Delete session](static/images-readme/deletesession.png)
+
+#### Create note
+
+![Create note](static/images-readme/createnote.png)
+
+#### Search student
+
+![Search student](static/images-readme/searchstudent.png)
+
+#### Search results
+
+![Search results](static/images-readme/searchresults.png)
+
+#### Time report
+
+![Time Report](static/images-readme/timereport.png)
+
+#### Course Admin Features
+
+Course administrators can do all the features as mentors in front-end. The course administrators use the django admin pane in this mvp for student and mentor creation. They also use the admin pane for pairing of students and mentors by creating a student-mentor-card.
+
+## Features Left to Implement
+
+Following features are planned_
+
+ - Password reset function using email
+ - Export of time report as csv
+ - Registration function for students
+ - Front end for Course administrators
+ - File repository for upload on student profiles
+
+[Back to top](#ms-dashboard)
+
+## Languages used
+
+ - HTML5
+ - CSS3
+ - Javascript
+ - Python
+ - Django
+ - SQL - Postgres
+
+### Frameworks and libraries and tools
+
+ - GitPod
+ - GitHub
+ - Django
+ - Bootstrap
+ - DrawSQL
+ - Jquery
+
+### Installed packages
+
+ - asgiref==3.5.2
+ - cloudinary==1.29.0
+ - dj-database-url==0.5.0
+ - dj3-cloudinary-storage==0.0.6
+ - Django==3.2.13
+ - django-allauth==0.51.0
+ - django-crispy-forms==1.14.0
+ - gunicorn==20.1.0
+ - oauthlib==3.2.0
+ - psycopg2==2.9.3
+ - PyJWT==2.4.0
+ - python3-openid==3.2.0
+ - pytz==2022.1
+ - requests-oauthlib==1.3.1
+ - sqlparse==0.4.2
+
+## Testing 
+
+All testing in this project has been done manually during the development process, the project has not followed the principles of test driven development. Testing has for the most part followed the track of the user stories. Everytime a user story is concluded testing has occured. Each version has been tested before commited and the testing has been conducted in these steps:
+
+ - Code validation
+ - Functionality (That it actually does what it is supposed to)
+ - Bug elimination
+ - CRUD (On those sections when this occur)
+
+During the development process a lot of bugs has been discovered. A portion of them are presented in the Bugs during development section.
+
+Functionality testing has been conducted by the author of the project together with selected class mates and selected resources that are aknowledged in the Credit section.
+
+### Bugs during development
+
+There have been several small bugs during development. Most of them has been resolved by fixing faulty syntax but also a lot of them has been caused by logical errors. More sever bugs have been:
+
+- All users had admin rights
+  - Solution: Creating function that closes admin for non-staff users (Mentors)
+- Problems in getting a proper datestamp using date-selector in create session
+  - Solution: Creating a date-picker in widget.py and use widget in forms
+- Problem: Not allowing users to log in with only e-mail
+  - Solution: Scrapping auth user model and creating new custom user models based on BaseUserManager.
+- Problem: Custom CSS not "active" on heroku
+  - Solution: Set Collect Static to 0 and not use debug mode in settings.py
+
+Andy many more smaller ones that caused different types of errors but mostly were connected to bad syntax.
+
+### Validator Testing 
+
+Testing with https://validator.w3.org/ shows no errors on html:
+
+![Validator testing](static/images-readme/htmlvalidator.png)
+
+Testing with lighthouse gives the following results:
+
+![Validator testing](static/images-readme/lighthouse.png)
+
+Testing and validating using pep8 validations tools:
+
+All python code in this project is not perfect. Some are showing errors of lines that are to long, especially in settings.py and in other files that are installed as part of django. The majority of the problems are not causing errors and are not from code that I actually wrote. Therefore it's not possible to produce a clean slate of a perfect record since some of the code is not perfect but still functional.
+
+Testing with https://jigsaw.w3.org/css-validator/ shown no errors on CSS:
+
+![Validator testing](static/images-readme/cssvalidator.png)
+
+### Unfixed Bugs
+
+- Responsiveness is bad on smaller screens. Been trying to fix it but for some reason it is problematic.
+- Notes can't be created withouth choosing student, auto fill is not working correctly
+- Help modal sometimes shows up at bottom at screen, can't figure out why.
+
+ [Back to top](#ms-dashboard)
+
+## Deployment
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+The project was developed using Gitpod with regular commits to Github. In order to deploy to Heroku a requirements.txt file needs to be created
+and it is important that the database is created in Heroku so that the database can be migrated before actual deployment.
+
+Before migrating the database I used the following cofigvars:
+
+ - key: SECRET_KEY | value
+ - key: PORT | value
+ - key: DATABASE_URL | value
+
+All values was provided by Heroku and I used env.py to store the values for my project and used the variables for the values in settings.py for the Database url and secret key. Heroku also needs to be set as an allowed host in settings.py (please see settings.py in this repository for details).
+
+Migration of database can be done prior of deployment. If set up correctly your environment will use Herokus database and not local sqlite.
+
+Before the push to GitHub a procfile needs to be created with the content: web: gunicorn msdashboard2022.wsgi
+
+After deployment push to Github the project was deployed from Heroku using the "Deploy" tab.
+
+After those steps were taken the application was deployed at the following link: https://ms-dashboard2022.herokuapp.com/
+
+## Content 
+
+All content in the app and on the site has been produced by the author of the project.
+
+## Credits 
+
+### For code inspiration, design inputs, help and advice.
+
+I have consulted numerous websites, individuals and slack channels to get support for the code. No code block is directly copied (a part from the ones stated in the comments in the code) but some generates from information I gathered from other developers and sites:
+
+ - [W3 Schools](https://www.w3schools.com) for helping me understand Django.
+ - [Code Institute](https://codeinstitute.net/) for all course material leading up to this project.
+ - [Stack Overflow](https://stackoverflow.com/) for hours of searching and troubleshooting.
+
+ And all the "hundreds of sites" I partially visited during my trouble shooting. All code that I have borrowed have been commented in the code.
+
+### Acknowledgment
+
+ - [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) My fantastic mentor at Code Institute, thank you for your support, feedback, bug testing and great sense of humor.
+ - [Angelica Guimarães Amorim](https://www.linkedin.com/in/angelica-amorim/) Thank you for everything, and I mean everything, best work-mate and idea generator!
+ - [Lauren-Nicole Popich](https://www.linkedin.com/in/lauren-nicole-popich-1ab87539/) Thank you for testing dealing with my stress over this project, you are a life saver!
+
+ [Am I Responsive](http://ami.responsivedesign.is/) was used to create the image on top of this ReadMe

@@ -32,18 +32,19 @@ A live version of this project can be found at this url: https://magnolia-tree.h
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
     + [Sign In](#sign-in "Sign In")
-    + [List of students](#list-of-students "List of students")
-    + [Student details](#student-details "Student details")
-    + [List of sessions](#List-of-sessions "List of sessions")
-    + [Create session](#create-session "Create session")
-    + [Session details](#session-details "Session details")
-    + [Edit session](#edit-session "Edit session")
-    + [Delete session](#delete-session "delete-session")
-    + [Create note](#create-note "Create Note")
-    + [Search student](#search-student "Search Student")
-    + [Search results](#search-results "Search Results")
-    + [Time Report](#time-report "Time Report")
-    + [Course Admin Features](#course-admin-features "Course Admin Features")
+    + [List of Posts](#list-of-posts "List of Posts")
+    + [List of Categories](#list-of-categories "List of Categories")
+    + [List of Sections](#List-of-sections "List of Sections")
+    + [Create Post](#create-post "Create Post")
+    + [Add Comment](#add-comment "Add Comment")
+    + [Edit Post](#edit-post "Edit Post")
+    + [Edit Comment](#edit-comment "Edit Comment")
+    + [Give Like](#give-like "Give Like")
+    + [Delete Post](#delete-post "Delete Post")
+    + [Delete Comment](#delete-comment "Search Results")
+    + [Delete Like](#delete-like "Delete Like")
+    + [Search Content by Category](#search-content-by-category "Search Content by Category")
+    + [Search Content by Section](#search-content-by-section "Search Content by Section")
   + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
 + [Languages used](#languages-used "Languages used")
   + [Frameworks and libraries and tools](#frameworks-and-libraries-and-tools "Frameworks and libraries and tools")
@@ -71,7 +72,7 @@ This application is ment for:
 
 ### User Goals
 
-To have all publications and everything else related to it stored in one place so that the users and admins can access easily whenever wanted or necessary.
+To have all publications and everything else related to it, stored in one place so that the users and admins can access easily whenever wanted or necessary.
 To have a good overview of all posts, comments, likes and interactions.
 
 ### User Stories
@@ -137,17 +138,15 @@ Focusing on the data and the CRUD was the initial intention and using Bootstrap 
 
 ## Features 
 
-Mdash consists of two main features for Mentors:
+Magnolia Tree Blog consists of two main features for Users:
 
-Add information regarding a student
-Add information regarding a session with a student
+Create an account so they can have full access as a site user
+Add, delete and update their own content on the site
 
-Course administrators main features are:
+Site Admins main features are:
 
-Add a mentor
-Add a student
-Pair a mentor and a student
-Take part of information from mentors
+Publish posts and comments made by Users
+Delete anyone's content at any time
 
 ### Existing Features
 
@@ -155,51 +154,57 @@ Take part of information from mentors
 
 ![Sign in](static/images-readme/signin.png)
 
-#### List of students
+#### List of Posts
 
-![List of students](static/images-readme/listofstudents.png)
+![List of Posts](image)
 
-#### Student details
+#### List of Categories
 
-![Student details](static/images-readme/detailsstudent.png)
-![Student details 2](static/images-readme/detailsstudent2.png)
+![Lis of Categories](image)
 
-#### List of sessions
+#### List of Sections
 
-![List of sessions](static/images-readme/listofsessions.png)
+![List of Sections](image)
 
-#### Create session
+#### Create Post
 
-![Create Session](static/images-readme/createsession.png)
+![Create Post](image)
 
-#### Session details
+#### Add Comment
 
-![Session Details](static/images-readme/detailsession.png)
-![Session Details2](static/images-readme/summarysession.png)
+![Add Comment](image)
 
-#### Edit session
+#### Edit Post
 
-![Edit session](static/images-readme/editsession.png)
+![Edit Post](image)
 
-#### Delete session
+#### Edit Comment
 
-![Delete session](static/images-readme/deletesession.png)
+![Edit Comment](image)
 
-#### Create note
+#### Give Like
 
-![Create note](static/images-readme/createnote.png)
+![Give Like](image)
 
-#### Search student
+#### Delete Post
 
-![Search student](static/images-readme/searchstudent.png)
+![Delete Post](image)
 
-#### Search results
+#### Delete Comment
 
-![Search results](static/images-readme/searchresults.png)
+![Delete Comment](image)
 
-#### Time report
+#### Delete Like
 
-![Time Report](static/images-readme/timereport.png)
+![Delete Like](image)
+
+#### Search Content by Category
+
+![Search Content by Category](image)
+
+#### Search Content by Section
+
+![Search Content by Section](image)
 
 #### Course Admin Features
 

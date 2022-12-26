@@ -19,15 +19,16 @@ A live version of this project can be found at this url: https://magnolia-tree.h
 
 + [UX](#ux "UX")
   + [User Demographic](#user-demographic "User Demographic")
-  + [User Goals](#user-goals "User goals")
+  + [User Goals](#user-goals "User Goals")
   + [User Stories](#user-stories "User Stories")
     + [Site User](#site-user "Site User")
     + [Site User / Admin](#site-user-admin "Site User / Admin")
     + [Site Admin](#site-admin "Site Admin")
   + [Project Purpose](#project-purpose "Project Purpose")
-  + [Design diagram](#design-diagram "Design diagram")
+  + [Design Diagram](#design-diagram "Design Diagram")
   + [Site Navigation](#site-navigation "Site Navigation")
-  + [Database schema](#database-schema "Database schema")
+  + [Blog Navigation](#blog-navigation "Blog Navigation")
+  + [Database ERD](#database-erd "Database ERD")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
     + [Sign In](#sign-in "Sign In")
@@ -111,8 +112,7 @@ From Code Institutes assessment guide:
 
 In this project, you'll build a Full-Stack site based on business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
 
-
-### Design diagram
+### Design Diagram
 
 The idea of Magnolia Tree Blog was to follow the same design concepts as the Magnolia Tree web page.
 Focusing on the data and the CRUD was the initial intention and using Bootstrap as much as possible. The initial design templates was very simple. Focus was to be able to incoorporate all the user stories in a clean, neat and functional way.
@@ -121,15 +121,19 @@ Focusing on the data and the CRUD was the initial intention and using Bootstrap 
 ![Wireframe2](static/images-readme/wire2.png)
 ![Wireframe3](static/images-readme/wire3.png)
 
-### Site navigation
+### Site Navigation
 
-![Site navigation](static/images-readme/sitenav.png)
+![Site navigation](/media/images-readme/sitenavigation.png)
+
+### Blog Navigation
+
+![Blog Navigation](/media/images-readme/blognavigation.png)
 
 ### Database ERD
 
 ![Schema](/media/images-readme/ERD.png)
 
-[Back to top](#ms-dashboard)
+[Back to top](#magnolia-tree-blog)
 
 ## Features 
 

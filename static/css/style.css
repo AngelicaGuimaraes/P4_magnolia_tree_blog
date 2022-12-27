@@ -103,6 +103,22 @@ footer {
     color: white;
 }
 
+/* Classes hero image css */
+
+.classes-hero {
+    margin-top: 0;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#classes-hero-image {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
+
 /* Blog images */
 
 .blog-picture {

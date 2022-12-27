@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-Test
+{% load crispy_forms_tags %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5 col-sm-12">
+            <form method="post" action="{% url 'update_comment' comment.pk %}" style="margin-top: 1.3em;">
+                {{ form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-signup btn-lg">Edit</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
 {%endblock%}

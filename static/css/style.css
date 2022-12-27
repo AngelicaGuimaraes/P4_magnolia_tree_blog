@@ -115,7 +115,7 @@ footer {
     color: #af8e38;
 }
 
-/* blog header */
+/* Blog header */
 
 .blog-header {
     color: #af8e38;
@@ -123,4 +123,58 @@ footer {
 
 .blog-header a {
     color: #3a3a3a;
+}
+
+/* Blog post */
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+}
+
+.post-title {
+    margin-top: 15%;
+    margin-left: 7%;
+}
+
+.blog-post-head {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.blog-post-head-text {
+    background-color: #D1AA91;
+    color: white;
+    position: relative;
+}
+
+.post-details {
+    margin-left: 7%;
+    color: white;
+}
+
+.blog-post-head-image {
+    background-color: #D1AA91;
+    position: relative;
+    overflow: hidden;
+}
+
+.edit-icon {
+    color: #D1AA91;
+}
+
+.delete-icon {
+    color: #D1AA91;
 }

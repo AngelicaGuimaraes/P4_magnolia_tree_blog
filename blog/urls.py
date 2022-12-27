@@ -32,4 +32,5 @@ urlpatterns = [
     path('contact/', views.contact_page, name='contact'),
     path('blog/', views.BlogPage.as_view(), name='blog'),
     path('<slug:slug>/', views.BlogPostDetail.as_view(), name='blog_post'),
+    path('like/<slug:slug>', views.LikeBlogPost.as_view(), name='like_post'),
 ]

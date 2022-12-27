@@ -60,3 +60,63 @@ class BlogPostDetail(View):
                 'comment_form': CommentForm()
             },
         )
+
+    def post(self, request, slug, *args, **kwargs):
+        """
+        Submit a new comment to a
+        blog post.
+        """
+        queryset = BlogPost.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by('-created_on')
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+            messages.success(
+                request,
+                "Your comment will be reviewd before it's published. "
+                )
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            'blog-post.html',
+            {
+                'post': post,
+                'comments': comments,
+                'commented': True,
+                'liked': liked,
+                'comment_form': CommentForm()
+            },
+        )
+
+
+class LikeBlogPost(View):
+    """
+    Class that makes a user be able to like a blogpost.
+    Borrowed from "I think therefore I am" project from 
+    Code institute.
+    """
+    def post(self, request, slug):
+        """
+        Makes sure there is authenticated user
+        and allows a like/unlike.
+        """
+        post = get_object_or_404(BlogPost, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('blog_post', args=[slug]))

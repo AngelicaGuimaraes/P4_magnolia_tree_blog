@@ -2,16 +2,115 @@
 {% block content %}
 {% load static %}
 
-<ul>
-    {% for post in blogpost_list %}
-    <li><a href="{% url 'blog_post' post.slug  %}" class="post-link">{{ post.title }}</a></li>
-    <li>{{ post.author }}</li>
-    <li>{{ post.created_on }}</li>
-    <li>{{ post.category.all|join:", " }}</li>
-    <li>{{ post.section.all|join:", " }}</li>
-    {% endfor %}
-</ul>
+<div class="col blog-header">
+    <div class="row justify-content-md-center text-center">
+        <div class="col-md-8 col-sm-12">
+            <h2>Magnolia Tree blog</h2>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-md-8 col-sm-12">
+            <p>We share our experiences but we are also interested in your experiences. If you have a yoga expereince to share, please write about it. We will publish it if it is in line with our values</p>
+            <p>Create Blog post: <a href="{% url 'create_post' %}">Create blog post</a></p>
+        </div>
+    </div>
+</div>
 
-Create Blog post: <a href="{% url 'create_post' %}">Create blog post</a>
+<div class="col-12">
+    <div class="row">
+        {% for post in blogpost_list %}
+        {% if forloop.counter == 1 %}
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="test">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="card-img-top blog-picture" src="{% static 'images/placeholder-default.jpg' %}" alt="default image">
+                        {% else %}
+                        <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                        {% endif %}
+                    </div>
+                    <a href="{% url 'blog_post' post.slug  %}" class="blog-link">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                    </a>
+                    <hr />
+                    <p>Author: {{ post.author }}</p>
+                    <p><i>Category: {{ post.category.all|join:", " }}</i></p>
+                    <p><i>Section: {{ post.section.all|join:", " }}</i></p>
+                    <p>{{ post.excerpt }} </p>
+                    <p>{{ post.created_on}}</p>
+                    <p><i class="far fa-heart"></i> {{ post.number_of_likes }}</p>
+                </div>
+            </div>
+        </div>
+        {% elif forloop.counter == 2 %}
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="image-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="card-img-top blog-picture" src="{% static 'images/placeholder-default.jpg' %}" alt="default image">
+                        {% else %}
+                        <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                        {% endif %}
+                    </div>
+                    <a href="{% url 'blog_post' post.slug  %}" class="blog-link">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                    </a>
+                    <hr />
+                    <p>Author: {{ post.author }}</p>
+                    <p><i>Category: {{ post.category.all|join:", " }}</i></p>
+                    <p><i>Section: {{ post.section.all|join:", " }}</i></p>
+                    <p>{{ post.excerpt }}</p>
+                    <p>{{ post.created_on}}</p>
+                    <p><i class="far fa-heart"></i> {{ post.number_of_likes }}</p>
+                </div>
+            </div>
+        </div>
+
+        {% else %}
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="image-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="card-img-top blog-picture" src="{% static 'images/placeholder-default.jpg' %}" alt="default image">
+                        {% else %}
+                        <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                        {% endif %}
+                    </div>
+                    <a href="{% url 'blog_post' post.slug  %}" class="blog-link">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                    </a>
+                    <hr />
+                    <p>Author: {{ post.author }}</p>
+                    <p><i>Category: {{ post.category.all|join:", " }}</i></p>
+                    <p><i>Section: {{ post.section.all|join:", " }}</i></p>
+                    <p>{{ post.excerpt }}</p>
+                    <p>{{ post.created_on}}</p>
+                    <p><i class="far fa-heart"></i> {{ post.number_of_likes }}</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <br>
+<div class="row justify-content-md-center mb-4">
+    <div class="row next-prev-button text-center">
+        {% if is_paginated %}
+        <div>
+            {% if page_obj.has_previous %}
+            <button onclick="location.href='?page={{ page_obj.previous_page_number }}'" type="button" class="btn btn-light">PREV</button>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <button onclick="location.href='?page={{ page_obj.next_page_number }}'" type="button" class="btn btn-light">NEXT</button>
+            {% endif %}
+        </div>
+    {% endif %}
+    </div>
+</div>
+</div>
 
 {%endblock%}

@@ -69,6 +69,49 @@ class Section(models.Model):
         return reverse('section_name', args=[str(self.id)])
 
 
+class BlogPost(models.Model):
+    """
+    Model for blog post. This model was inspired by the
+    "I think therefore I blog" project by Code Institute.
+    """
+    title = models.CharField(max_length=200, unique=True)
+    category = models.ManyToManyField(
+        Category, help_text='Select a Yoga category for the blogpost'
+        )
+    section = models.ManyToManyField(
+        Section, help_text='Select a section of body affected'
+        )
+    slug = models.SlugField(max_length=200, unique=True)
+    content = models.TextField(blank=True)
+    excerpt = models.TextField(blank=True)
+    featured_image = CloudinaryField('image', default='placeholder')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='blog_posts'
+        )
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+    likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
+
+    class Meta:
+        """
+        To display blog posts in descending order
+        """
+        ordering = ['-created_on']
+
+    def __str__(self):
+        """
+        To return a string representation of an object
+        """
+        return self.title
+
+    def number_of_likes(self):
+        """
+        To return total number of post likes
+        """
+        return self.likes.count()
+
+
 
 
 

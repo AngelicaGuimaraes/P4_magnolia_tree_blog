@@ -155,3 +155,23 @@ class DeleteComment(DeleteView):
         self.success_url = f'/{self.get_object().post.slug}'
         self.slug = self.get_object().post.slug
         return reverse_lazy('blog_post', args=[self.slug])
+
+
+class UserBlogPost(SuccessMessageMixin, CreateView):
+    """
+    Form for creating a blog post
+    """
+    model = BlogPost
+    form_class = CreateBlogPost
+    template_name = 'create-blog-post.html'
+    success_url = '../blog/'
+    success_message = "Your blog post is sent for review and will be published if approved"
+
+    def form_valid(self, form):
+        """
+        Validates user when using the form
+        """
+
+        form.instance.author = self.request.user
+        form.instance.slug = slugify(form.instance.title)
+        return super().form_valid(form)

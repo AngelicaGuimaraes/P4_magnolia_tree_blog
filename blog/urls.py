@@ -43,4 +43,9 @@ urlpatterns = [
         views.DeleteComment.as_view(),
         name='delete_comment'
         ),
+    path(
+        'blog/create_post',
+        views.UserBlogPost.as_view(),
+        name='create_post'
+        ),
 ]

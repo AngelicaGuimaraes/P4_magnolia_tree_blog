@@ -39,8 +39,24 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 70vh;
   }
+
+.container {
+    vertical-align: top;
+    margin-top: -4vh;
+}
+
+.header {
+    vertical-align: top;
+    margin-top: -10vh;
+}
+
+.subheader {
+    color: #ffffff;
+    font-size: 100%;
+    margin-top: -2vh;
+}
 
 
 /* Footer css */

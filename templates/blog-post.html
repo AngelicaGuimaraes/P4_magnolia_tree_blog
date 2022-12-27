@@ -1,5 +1,67 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-Test
+{% load crispy_forms_tags %}
+
+<ul>
+    <li>{{ post.title }}</li>
+    <li>{{ post.category.all|join:", " }}</li>
+    <li>{{ post.section.all|join:", " }}</li>
+    <li>{{ post.content | safe }}</li>
+    <li>Created on:{{ post.created_on }} Updated on:{{ post.created_on }}</li>
+    <li>Author: {{ post.author }}</li>
+    <li><img src=" {{ post.featured_image.url }}" alt="{{ post.title }}"></li>
+</ul>
+
+<strong>
+    {% if user.is_authenticated %}
+    <form class="d-inline" action="{% url 'like_post' post.slug %}" method="POST">
+        {% csrf_token %}
+        {% if liked %}
+        <button type="submit" name="blogpost_id" value="{{ post.slug }}"
+            class="like-button-pressed"><i class="fas fa-heart"></i> {{ post.number_of_likes }}</button>
+        {% else %}
+        <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="like-button"><i
+                class="far fa-heart"></i> {{ post.number_of_likes }}</button>
+        {% endif %}
+    </form>
+
+    {% else %}
+    <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
+    {% endif %}
+</strong>
+
+{% with comments.count as total_comments %}
+<strong class="text-secondary"><i class="far fa-comments"></i> {{ total_comments }}</strong>
+{% endwith %}
+
+
+{% if user.is_authenticated %}
+<form method="POST" style="margin-top: 1.3em;">
+    {{ comment_form | crispy }}
+    {% csrf_token %}
+    <button type="submit" class="submit-comment-button">Submit</button>
+</form>
+{% endif %}
+
+<h3>Comments:</h3>
+{% for comment in comments %}
+<ul>
+    <li>{{ comment.name }}</li>
+    <li>{{ comment.created_on }}</li>
+
+
+
+{% if request.user == comment.name %}
+<li>
+{{ comment.body | linebreaks }}
+<a href="{% url 'update_comment' comment.pk %}" aria-label="To edit your comment presss here"><i class="fa-solid fa-file-pen"></i></a>
+<a href="{% url 'delete_comment' post.slug comment.pk %}" aria-label="To delete your comment press here"><i class="fa-solid fa-trash-can"></i></a>
+</li>
+{% else %}
+<li>{{ comment.body | linebreaks }}</li>
+{% endif %}
+</ul>
+{% endfor %}
+
 {%endblock%}

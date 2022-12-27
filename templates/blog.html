@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-Test
+
+<ul>
+    {% for post in blogpost_list %}
+    <li><a href="{% url 'blog_post' post.slug  %}" class="post-link">{{ post.title }}</a></li>
+    <li>{{ post.author }}</li>
+    <li>{{ post.created_on }}</li>
+    <li>{{ post.category.all|join:", " }}</li>
+    <li>{{ post.section.all|join:", " }}</li>
+    {% endfor %}
+</ul>
+
+Create Blog post: <a href="{% url 'create_post' %}">Create blog post</a>
+
 {%endblock%}

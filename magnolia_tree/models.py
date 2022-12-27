@@ -110,7 +110,7 @@ class BlogPost(models.Model):
         To return total number of post likes
         """
         return self.likes.count()
-        
+
 
 class BlogComment(models.Model):
     """
@@ -153,6 +153,3 @@ class BlogComment(models.Model):
 
 
 
-
-
-       

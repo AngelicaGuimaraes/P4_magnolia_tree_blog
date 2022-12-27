@@ -121,9 +121,7 @@ In this project, you'll build a Full-Stack site based on business logic used to 
 The idea of Magnolia Tree Blog was to follow the same design concepts as the Magnolia Tree web page.
 Focusing on the data and the CRUD was the initial intention and using Bootstrap as much as possible. The initial design templates was very simple. Focus was to be able to incoorporate all the user stories in a clean, neat and functional way.
 
-![Wireframe1](static/images-readme/wire1.png)
-![Wireframe2](static/images-readme/wire2.png)
-![Wireframe3](static/images-readme/wire3.png)
+![Wireframe](/media/images-readme/blogpage.png)
 
 ### Site Navigation
 
@@ -270,9 +268,9 @@ All testing in this project has been done manually during the development proces
  - Bug elimination
  - CRUD (On those sections when this occur)
 
-During the development process a lot of bugs has been discovered. A portion of them are presented in the Bugs during development section.
+During the development process a lot of bugs have been discovered. A portion of them are presented in the Bugs during development section.
 
-Functionality testing has been conducted by the author of the project together with selected class mates and selected resources that are aknowledged in the Credit section.
+Functionality testing has been conducted by the author of the project together with selected class mate and selected resources that are aknowledged in the Credit section.
 
 ### Bugs during development
 
@@ -293,11 +291,11 @@ Andy many more smaller ones that caused different types of errors but mostly wer
 
 Testing with https://validator.w3.org/ shows no errors on html:
 
-![Validator testing](static/images-readme/htmlvalidator.png)
+![Validator testing](image)
 
 Testing with lighthouse gives the following results:
 
-![Validator testing](static/images-readme/lighthouse.png)
+![Validator testing](image)
 
 Testing and validating using pep8 validations tools:
 
@@ -305,7 +303,7 @@ All python code in this project is not perfect. Some are showing errors of lines
 
 Testing with https://jigsaw.w3.org/css-validator/ shown no errors on CSS:
 
-![Validator testing](static/images-readme/cssvalidator.png)
+![Validator testing](image)
 
 ### Unfixed Bugs
 
@@ -313,7 +311,7 @@ Testing with https://jigsaw.w3.org/css-validator/ shown no errors on CSS:
 - Notes can't be created withouth choosing student, auto fill is not working correctly
 - Help modal sometimes shows up at bottom at screen, can't figure out why.
 
- [Back to top](#ms-dashboard)
+ [Back to top](#magnolia-tree-blog)
 
 ## Deployment
 
@@ -328,15 +326,15 @@ Before migrating the database I used the following cofigvars:
  - key: PORT | value
  - key: DATABASE_URL | value
 
-All values was provided by Heroku and I used env.py to store the values for my project and used the variables for the values in settings.py for the Database url and secret key. Heroku also needs to be set as an allowed host in settings.py (please see settings.py in this repository for details).
+All values were provided by Heroku and I used env.py to store the values for my project and used the variables for the values in settings.py for the Database url and secret key. Heroku also needs to be set as an allowed host in settings.py (please see settings.py in this repository for details).
 
 Migration of database can be done prior of deployment. If set up correctly your environment will use Herokus database and not local sqlite.
 
-Before the push to GitHub a procfile needs to be created with the content: web: gunicorn msdashboard2022.wsgi
+Before the push to GitHub a procfile needs to be created with the content: web: gunicorn blog.wsgi
 
 After deployment push to Github the project was deployed from Heroku using the "Deploy" tab.
 
-After those steps were taken the application was deployed at the following link: https://ms-dashboard2022.herokuapp.com/
+After those steps were taken the application was deployed at the following link: https://magnolia-tree.herokuapp.com/
 
 ## Content 
 
@@ -352,12 +350,11 @@ I have consulted numerous websites, individuals and slack channels to get suppor
  - [Code Institute](https://codeinstitute.net/) for all course material leading up to this project.
  - [Stack Overflow](https://stackoverflow.com/) for hours of searching and troubleshooting.
 
- And all the "hundreds of sites" I partially visited during my trouble shooting. All code that I have borrowed have been commented in the code.
+ All code that I have borrowed have been commented in the code.
 
 ### Acknowledgment
 
- - [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) My fantastic mentor at Code Institute, thank you for your support, feedback, bug testing and great sense of humor.
- - [Angelica Guimarães Amorim](https://www.linkedin.com/in/angelica-amorim/) Thank you for everything, and I mean everything, best work-mate and idea generator!
- - [Lauren-Nicole Popich](https://www.linkedin.com/in/lauren-nicole-popich-1ab87539/) Thank you for testing dealing with my stress over this project, you are a life saver!
+ - [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) My mentor at Code Institute, thank you for your support.
+ - [Mats Simonsson](https://www.linkedin.com/in/mats-simonsson-2aa6874/) My dear friend and mentor. Thank you for all the patience, suggestions, advices and for spending so much time helping me with this project. You are truly the best!
 
  [Am I Responsive](http://ami.responsivedesign.is/) was used to create the image on top of this ReadMe

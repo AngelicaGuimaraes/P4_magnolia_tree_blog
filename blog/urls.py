@@ -48,4 +48,5 @@ urlpatterns = [
         views.UserBlogPost.as_view(),
         name='create_post'
         ),
+    path('accounts/', include('allauth.urls')),
 ]

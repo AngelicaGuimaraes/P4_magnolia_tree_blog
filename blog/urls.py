@@ -33,4 +33,14 @@ urlpatterns = [
     path('blog/', views.BlogPage.as_view(), name='blog'),
     path('<slug:slug>/', views.BlogPostDetail.as_view(), name='blog_post'),
     path('like/<slug:slug>', views.LikeBlogPost.as_view(), name='like_post'),
+    path(
+        'update-comment/<int:pk>',
+        views.UpdateComment.as_view(),
+        name='update_comment'
+        ),
+    path(
+        'delete_comment/<slug:slug>/<int:pk>/',
+        views.DeleteComment.as_view(),
+        name='delete_comment'
+        ),
 ]

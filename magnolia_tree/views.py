@@ -120,3 +120,38 @@ class LikeBlogPost(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('blog_post', args=[slug]))
+
+
+class UpdateComment(SuccessMessageMixin, UpdateView):
+    """
+    View for updateing comment
+    """
+    model = BlogComment
+    form_class = CommentForm
+    context_object_name = 'comment'
+    template_name = 'update-comment.html'
+    success_message = "Your comment is updated"
+
+    def form_valid(self, form):
+        """
+        Success url return to blog post
+        """
+        self.success_url = f'/{self.get_object().post.slug}/'
+        return super().form_valid(form)
+
+
+class DeleteComment(DeleteView):
+    """
+    View for deleting comment
+    """
+    model = BlogComment
+    context_object_name = 'comment'
+    template_name = 'delete-comment.html'
+
+    def get_success_url(self, *args):
+        """
+        Success url return to blog post
+        """
+        self.success_url = f'/{self.get_object().post.slug}'
+        self.slug = self.get_object().post.slug
+        return reverse_lazy('blog_post', args=[self.slug])

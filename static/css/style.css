@@ -82,3 +82,25 @@ footer {
     padding: 60px;
     color: white;
 }
+
+/* Blog images */
+
+.blog-picture {
+    width: 100%;
+}
+
+/* Blog link */
+
+.blog-link {
+    color: #af8e38;
+}
+
+/* blog header */
+
+.blog-header {
+    color: #af8e38;
+}
+
+.blog-header a {
+    color: #3a3a3a;
+}

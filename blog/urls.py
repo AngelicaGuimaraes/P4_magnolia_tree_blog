@@ -13,9 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from magnolia_tree import views
+from django.shortcuts import render, get_object_or_404, reverse
+from django.views import generic, View
+from django.views.generic.edit import UpdateView, DeleteView, CreateView
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
+from django.utils.text import slugify
+from .models import BlogPost, BlogComment
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +30,6 @@ urlpatterns = [
     path('', views.home_page, name='home'),
     path('classes/', views.classes_page, name='classes'),
     path('contact/', views.contact_page, name='contact'),
+    path('blog/', views.BlogPage.as_view(), name='blog'),
+    path('<slug:slug>/', views.BlogPostDetail.as_view(), name='blog_post'),
 ]

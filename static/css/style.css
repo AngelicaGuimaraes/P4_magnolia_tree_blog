@@ -47,10 +47,15 @@ body {
     margin-top: -4vh;
 }
 
+/* Home page header css */
+
 .header {
     vertical-align: top;
     margin-top: -10vh;
+    font-size: 260%;
 }
+
+/* Home page subheader css */
 
 .subheader {
     color: #ffffff;
@@ -58,6 +63,20 @@ body {
     margin-top: -2vh;
 }
 
+/* Home page content header css */
+
+.content-header {
+    color:#af8e38;
+    font-size: 140%;
+    margin-bottom: 16px;
+}
+
+/* Home page content css */
+
+.home-content {
+    font-size: 1.2vw;
+    margin-bottom: 16px;
+}
 
 /* Footer css */
 
@@ -71,6 +90,7 @@ footer {
 
 .social-networks {
     text-align: center;
+    padding: 0;
 }
 
 .social-networks>li {

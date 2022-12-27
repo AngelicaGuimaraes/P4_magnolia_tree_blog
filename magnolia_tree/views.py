@@ -1,4 +1,16 @@
-from django.shortcuts import render
+"""
+Views for magnolia tree blog django project.
+"""
+from django.shortcuts import render, get_object_or_404, reverse
+from django.views import generic, View
+from django.views.generic.edit import UpdateView, DeleteView, CreateView
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
+from django.utils.text import slugify
+from .models import BlogPost, BlogComment
+from .forms import CommentForm, CreateBlogPost
 
 
 def home_page(request):

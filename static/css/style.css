@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #3a3a3a
+}
+
+
+/* Navbar and logo */
+.navbar-nav .nav-item .nav-link {
+    color: #af8e38;
+    font-size: 1.3vw;
+ }
+
+ .menu-item a:hover {
+    border-bottom: 1px solid #af8e38;
+}
+
+.logo-top {
+    /*display: block;*/
+    max-width: 20%;
+    height: auto;
+}
+
+/* Hamburger icon for colapsable menu */
+.fa-bars {
+    color: #af8e38;
+    font-size: 200%;
+}
+
+
+/* Hero Jumbotron, inspired by searching on Codepen */
+
+.jumbotron {
+    color: #af8e38;
+    background-image: url("../images/home-hero-image-1280.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+  }
+
+
+/* Footer css */
+
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    background-color: #D1AA91;
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks>li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    padding: 60px;
+    color: white;
+}

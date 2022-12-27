@@ -110,6 +110,45 @@ class BlogPost(models.Model):
         To return total number of post likes
         """
         return self.likes.count()
+        
+
+class BlogComment(models.Model):
+    """
+    Model for comments on blogposts inspired by the
+    "I think therefore I blog" project by Code Institute.
+    """
+    post = models.ForeignKey(
+        BlogPost, on_delete=models.CASCADE, related_name='comments'
+        )
+    name = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        max_length=20,
+        related_name='comment_author'
+        )
+    email = models.EmailField(blank=True)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        """
+        Order comments in ascending order
+        """
+        ordering = ['created_on']
+
+    def __str__(self):
+        """
+        Display the comment as the comment text,
+        and comment author name
+        """
+        return f"Comment {self.body} by {self.name}"
+
+    def get_absolute_url(self):
+        """
+        Returns url based on primary key 
+        """
+        return reverse('post_detail', kwargs={'pk': self.pk})
 
 
 

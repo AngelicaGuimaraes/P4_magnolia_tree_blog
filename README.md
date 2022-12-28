@@ -1,6 +1,6 @@
 # Magnolia Tree Blog
 
-![Responsive screenshot](/media/images-readme/00-readme-responsive-image.png)
+![Responsive screenshot](/media/images-readme/amireponsive-blogpage.png)
 
 # The purpose with this project
 
@@ -26,25 +26,25 @@ A live version of this project can be found at this url: https://magnolia-tree.h
     + [Site Admin](#site-admin "Site Admin")
   + [Project Purpose](#project-purpose "Project Purpose")
   + [Design Diagram](#design-diagram "Design Diagram")
+    + [Homepage](#homepage "Homepage")
+    + [Classes Page](#classes-page "Classes Page")
+    + [Contact Page](#contact-page "Contact Page")
   + [Site Navigation](#site-navigation "Site Navigation")
   + [Blog Navigation](#blog-navigation "Blog Navigation")
   + [Database ERD](#database-erd "Database ERD")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
     + [Sign In](#sign-in "Sign In")
+    + [Signup Form](#signup-form "Signup Form")
     + [List of Posts](#list-of-posts "List of Posts")
-    + [List of Categories](#list-of-categories "List of Categories")
-    + [List of Sections](#List-of-sections "List of Sections")
+    + [Post Details](#Post-Details "Post Details")
     + [Create Post](#create-post "Create Post")
+    + [List of Categories and Sections](#list-of-categories-and-sections "List of Categories ans Sections")
     + [Add Comment](#add-comment "Add Comment")
-    + [Edit Post](#edit-post "Edit Post")
-    + [Edit Comment](#edit-comment "Edit Comment")
     + [Give Like](#give-like "Give Like")
     + [Delete Post](#delete-post "Delete Post")
     + [Delete Comment](#delete-comment "Search Results")
     + [Delete Like](#delete-like "Delete Like")
-    + [Search Content by Category](#search-content-by-category "Search Content by Category")
-    + [Search Content by Section](#search-content-by-section "Search Content by Section")
     + [Site Admin Features](#site-admin-features "Site Admin Features")
     + [Approve Post](#approve-post "Approve Post")
     + [Delete Content](#delete-content "Delete Content")
@@ -121,7 +121,14 @@ In this project, you'll build a Full-Stack site based on business logic used to 
 The idea of Magnolia Tree Blog was to follow the same design concepts as the Magnolia Tree web page.
 Focusing on the data and the CRUD was the initial intention and using Bootstrap as much as possible. The initial design templates was very simple. Focus was to be able to incoorporate all the user stories in a clean, neat and functional way.
 
-![Wireframe](/media/images-readme/blogpage.png)
+#### Homepage
+![Homepage](/media/images-readme/screencapture-homepage.png)
+
+#### Classes Page
+![Classes Page](/media/images-readme/screencapture-classespage.png)
+
+#### Contact Page
+![Contact Page](/media/images-readme/screencapture-contactpage.png)
 
 ### Site Navigation
 
@@ -153,69 +160,46 @@ Delete anyone's content at any time
 
 #### Sign In
 
-![Sign in](static/images-readme/signin.png)
+![Sign in](/media/images-readme/screencapture-signin-form.png)
+
+#### Signup Form
+
+![Signup Form](/media/images-readme/screencapture-signup-form.png)
 
 #### List of Posts
 
-![List of Posts](image)
+![List of Posts](/media/images-readme/screencapture-blogpage.png)
+![List of Posts2](/media/images-readme/screencapture-postspage-2.png)
 
-#### List of Categories
+#### Post Details
 
-![Lis of Categories](image)
-
-#### List of Sections
-
-![List of Sections](image)
+![Post Details](/media/images-readme/screencapture-postdetails.png)
 
 #### Create Post
 
-![Create Post](image)
+![Create Post](/media/images-readme/screencapture-createpost.png)
+
+#### List of Categories and Sections
+
+![Lis of Categories and Sections](/media/images-readme/screencapture-categories-sections.png)
 
 #### Add Comment
 
-![Add Comment](image)
-
-#### Edit Post
-
-![Edit Post](image)
-
-#### Edit Comment
-
-![Edit Comment](image)
+![Add Comment](/media/images-readme/screencapture-comment-field.png)
 
 #### Give Like
 
-![Give Like](image)
-
-#### Delete Post
-
-![Delete Post](image)
-
-#### Delete Comment
-
-![Delete Comment](image)
-
-#### Delete Like
-
-![Delete Like](image)
-
-#### Search Content by Category
-
-![Search Content by Category](image)
-
-#### Search Content by Section
-
-![Search Content by Section](image)
+![Give Like](/media/images-readme/screencapture-postlikes.png)
 
 #### Site Admin Features
 
 Site Admins can perform all the features as the Users plus publishing the posts and comments that have been written by users and are awaiting for approaval to go online.
 
-![Approve Post](image)
+![Approve/Delete Post](/media/images-readme/screencapture-delete-post.png)
 
 Site Admins can also delete any content, previously approved and published, at any time.
 
-![Delete Content](image)
+![Delete Content](/media/images-readme/screencapture-delete-comment.png)
 
 ## Features Left to be Implemented
 

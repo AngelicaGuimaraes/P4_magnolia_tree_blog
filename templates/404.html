@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="col">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8">
+            <h2>Oops! Something went wrong!</h2>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-md-5">
+            <p>Please choose another page in the menu or go back</p>
+            <a class="btn btn-light" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
+        </div>
+    </div>
+</div>
+{%endblock%}

@@ -102,6 +102,9 @@
                     {% csrf_token %}
                     <button type="submit" class="btn btn-light">Submit</button>
                 </form>
+                {% else %}
+                <h3>Not logged in</h3>
+                <p>You need to login to post a comment!</p>
                 {% endif %}
                 {% endif %}
             </div>

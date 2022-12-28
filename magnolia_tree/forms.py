@@ -34,7 +34,6 @@ class CreateBlogPost(forms.ModelForm):
         )
         widgets = {
             'content': SummernoteWidget(),
-            'excerpt': SummernoteWidget(),
         }
         labels = {
             'title': 'Title of your blogpost',

@@ -42,7 +42,7 @@ body {
     height: 70vh;
   }
 
-.container {
+.container-home {
     vertical-align: top;
     margin-top: -2vh;
 }
@@ -210,6 +210,11 @@ tr {
 
 /* Contact us header css */
 
+.container-contacts {
+    vertical-align: top;
+    margin-top: -2vh;
+}
+
 .header-contact {
     color: #D1AA91;
     vertical-align: top;
@@ -218,19 +223,19 @@ tr {
 
 /* Contact us css */
 
-.d-flex {
-    margin: 0 32px 0 0;
+.contact-list {
+    list-style-type: none;
 }
 
-.h3 {
+.h3-contact {
     font-size: 1.2vw;
-    margin-bottom: 16px;
-    margin-top: 16px;
+    font-weight: bold;
+    margin: 0;
 }
 
-.h4 {
+.p-contact {
     font-size: 1vw;
-    margin-bottom: 16px;
+    margin: 0;
 }
 
 /* Blog images */
@@ -271,8 +276,9 @@ tr {
 }
 
 .post-title {
-    margin-top: 15%;
-    margin-left: 7%;
+    margin-top: 6%;
+    margin-left: 6%;
+    font-size: 1.8vw;
 }
 
 .blog-post-head {
@@ -280,7 +286,7 @@ tr {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 30vh;
     width: 100%;
 }
 

@@ -219,7 +219,7 @@ tr {
 /* Contact us css */
 
 .d-flex {
-    margin: 0 32px;
+    margin: 0 32px 0 0;
 }
 
 .h3 {
@@ -231,6 +231,10 @@ tr {
 .h4 {
     font-size: 1.2vw;
     margin-bottom: 16px;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
 }
 
 /* Blog images */

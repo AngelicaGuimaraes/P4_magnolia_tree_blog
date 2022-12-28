@@ -105,6 +105,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blog.wsgi.application'
 
+SUMMERNOTE_CONFIG = {
+    # Found this on https://stackoverflow.com/questions/24598213/how-can-i-customize-summernote-text-editor-width
+    'summernote': {
+        'width': '100%',
+    },
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

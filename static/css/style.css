@@ -44,7 +44,7 @@ body {
 
 .container {
     vertical-align: top;
-    margin-top: -4vh;
+    margin-top: -2vh;
 }
 
 /* Home page header css */
@@ -161,6 +161,9 @@ footer {
     text-align: center;
     margin: 16px auto;
 }
+
+/* Table css used from Milestone P1 */
+
 table,
 th,
 td {
@@ -189,6 +192,20 @@ th {
 
 tr {
     height: 30px;
+}
+
+/* Contact Hero image css */
+
+.jumbotron-contact {
+    background-image: url("/static/images/contact-hero-image-1920.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0;
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 /* Blog images */
@@ -248,15 +265,17 @@ tr {
     position: relative;
 }
 
-.post-details {
-    margin-left: 7%;
-    color: white;
-}
-
 .blog-post-head-image {
     background-color: #D1AA91;
     position: relative;
     overflow: hidden;
+}
+
+/* Post details css */
+
+.post-details {
+    margin-left: 7%;
+    color: white;
 }
 
 .edit-icon {

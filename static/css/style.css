@@ -221,6 +221,11 @@ tr {
     font-size: 4.2vw;
 }
 
+.content-contact {
+    font-size: 1.4vw;
+    margin-bottom: 30px;
+}
+
 /* Contact us css */
 
 .contact-list {

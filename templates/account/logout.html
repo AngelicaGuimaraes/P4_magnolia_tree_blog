@@ -13,7 +13,7 @@
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
           {% endif %}
           <button type="submit" class="btn btn-light">{% trans 'Sign Out' %}</button>
-          <a class=“btn btn-light” href=“{{request.META.HTTP_REFERER|escape}}“>Back</a>
+          <a class="btn btn-light" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
         </form>
       </div>
   </div>

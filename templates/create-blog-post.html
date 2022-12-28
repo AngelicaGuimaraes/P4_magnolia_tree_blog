@@ -11,7 +11,7 @@
                 {{ form | crispy | safe }}
                 {% csrf_token %}
                 <button type="submit" class="btn btn-secondary">Submit</button>
-                <a class=“btn btn-light” href=“{{request.META.HTTP_REFERER|escape}}“>Back</a>
+                <a class="btn btn-light" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
             </form>
         </div>
     </div>

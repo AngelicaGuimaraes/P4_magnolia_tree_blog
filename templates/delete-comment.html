@@ -12,7 +12,7 @@
                 {% csrf_token %}
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-danger">Delete</button>
-                    <a class=“btn btn-light” href=“{{request.META.HTTP_REFERER|escape}}“>Back</a>
+                    <a class="btn btn-light" href="{{request.META.HTTP_REFERER|escape}}">Back</a>
                 </div>
             </form>
         </div>

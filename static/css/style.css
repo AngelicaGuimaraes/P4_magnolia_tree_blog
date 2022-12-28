@@ -233,10 +233,6 @@ tr {
     margin-bottom: 16px;
 }
 
-.selector-for-some-widget {
-    box-sizing: content-box;
-}
-
 /* Blog images */
 
 .blog-picture {

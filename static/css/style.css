@@ -208,6 +208,31 @@ tr {
     position: relative;
 }
 
+/* Contact us header css */
+
+.header-contact {
+    color: #D1AA91;
+    vertical-align: top;
+    font-size: 4.2vw;
+}
+
+/* Contact us css */
+
+.d-flex {
+    margin: 0 32px;
+}
+
+.h3 {
+    font-size: 1.6vw;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.h4 {
+    font-size: 1.2vw;
+    margin-bottom: 16px;
+}
+
 /* Blog images */
 
 .blog-picture {

@@ -34,7 +34,7 @@ body {
 /* Hero Jumbotron, inspired by searching on Codepen */
 
 .jumbotron-home {
-    color: #af8e38;
+    color: #D1AA91;
     background-image: url("../images/home-hero-image-1280.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ body {
 .header {
     vertical-align: top;
     margin-top: -10vh;
-    font-size: 260%;
+    font-size: 4.2vw;
 }
 
 /* Home page subheader css */
@@ -66,8 +66,8 @@ body {
 /* Home page content header css */
 
 .content-header {
-    color:#af8e38;
-    font-size: 140%;
+    color:#D1AA91;
+    font-size: 1.8vw;
     margin-bottom: 16px;
 }
 
@@ -86,6 +86,7 @@ footer {
     height: 150px;
     text-align: center;
     background-color: #D1AA91;
+    margin: 0;
 }
 
 .social-networks {
@@ -103,7 +104,7 @@ footer {
     color: white;
 }
 
-/* Classes hero image css */
+/* Classes Hero image css */
 
 .jumbotron-classes {
     background-image: url("/static/images/classes-hero-image-1920.png");
@@ -117,41 +118,77 @@ footer {
     position: relative;
 }
 
-#classes-hero-image {
-    max-width: 100%;
-    height: auto;
-    position: relative;
+/* Classes header css */
+
+.header-classes {
+    color: #D1AA91;
+    vertical-align: top;
+    font-size: 4.2vw;
 }
 
-/* about our classes section */
+/* Classes page content css */
 
-#about-our-classes {
+.classes-content {
+    font-size: 1.2vw;
+    margin-bottom: 16px;
+}
+
+.header-yoga-classes {
+    color:#D1AA91;
+    font-size: 2vw;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+.header-meditation-classes {
+    color:#D1AA91;
+    font-size: 2vw;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+/* Time table css */
+
+.table {
+    width: 80%;
+    margin-bottom: 1rem;
+    color: #212529;
+    margin: 16px auto;
+}
+
+.table-responsive {
+    width: 80%;
+    text-align: center;
+    margin: 16px auto;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(148, 170, 211, 0.4);
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+    background-color: rgb(148, 170, 211, 0.4);
+}
+
+table {
     width: 100%;
-    height: auto;
+    font-size: 1vw;
+    background-color: white;
 }
 
-.choose-your-class {
-    width: 60%;
-    height: auto;
-    text-align: left;
-    margin: 0 auto;
-    padding-top: 1%;
-    padding-bottom: 3%;
+th {
+    height: 40px;
 }
 
-#about-our-classes h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 3.4vw;
-    color: #D1AA91;
-}
-
-#about-our-classes h2 {
-    text-transform: uppercase;
-    font-size: 1.8vw;
-    color: #D1AA91;
-    text-align: center;
-    margin-top: 10px;
+tr {
+    height: 30px;
 }
 
 /* Blog images */

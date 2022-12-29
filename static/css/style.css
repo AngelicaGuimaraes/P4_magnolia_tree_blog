@@ -35,7 +35,7 @@ body {
 
 .jumbotron-home {
     color: #D1AA91;
-    background-image: url("../images/home-hero-image-1280.png");
+    background-image: url("https://res.cloudinary.com/dwqs3wssj/image/upload/v1672302979/static/images/home-hero-image-1280.13ed2cbfe294.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,7 +107,7 @@ footer {
 /* Classes Hero image css */
 
 .jumbotron-classes {
-    background-image: url("/static/images/classes-hero-image-1920.png");
+    background-image: url("https://res.cloudinary.com/dwqs3wssj/image/upload/v1672302975/static/images/classes-hero-image-1920.401e8aeeee60.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -197,7 +197,7 @@ tr {
 /* Contact Hero image css */
 
 .jumbotron-contact {
-    background-image: url("/static/images/contact-hero-image-1920.png");
+    background-image: url("https://res.cloudinary.com/dwqs3wssj/image/upload/v1672302978/static/images/contact-hero-image-1920.fcb31c8192cd.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

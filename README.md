@@ -342,4 +342,6 @@ I have consulted numerous websites, individuals and slack channels to get suppor
  - [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) My mentor at Code Institute, thank you for your support.
  - [Mats Simonsson](https://www.linkedin.com/in/mats-simonsson-2aa6874/) My dear friend and mentor. Thank you for all the patience, suggestions, advices and for spending so much time helping me with this project. You are truly the best!
 
- [Am I Responsive](http://ami.responsivedesign.is/) was used to create the image on top of this ReadMe
+ [Am I Responsive](http://ami.responsivedesign.is/) was used to create the image on top of this ReadMe.
+ [Canva](https://www.canva.com/) was used to get the images for the page headers and to build the wireframes.
+ [Dayly Cup of Yoga](https://dailycupofyoga.com/) was from where I got the blog posts to use on my blog pages.

@@ -42,9 +42,6 @@ A live version of this project can be found at this url: https://magnolia-tree.h
     + [List of Categories and Sections](#list-of-categories-and-sections "List of Categories ans Sections")
     + [Add Comment](#add-comment "Add Comment")
     + [Give Like](#give-like "Give Like")
-    + [Delete Post](#delete-post "Delete Post")
-    + [Delete Comment](#delete-comment "Search Results")
-    + [Delete Like](#delete-like "Delete Like")
     + [Site Admin Features](#site-admin-features "Site Admin Features")
     + [Approve Post](#approve-post "Approve Post")
     + [Delete Content](#delete-content "Delete Content")
@@ -112,7 +109,7 @@ As a **site admin** I can **approve or disapprove comments** so that **I can fil
 
 ### Project Purpose
 
-From Code Institutes assessment guide:
+From Code Institute's assessment guide:
 
 In this project, you'll build a Full-Stack site based on business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
 
@@ -208,6 +205,9 @@ Following features are planned
  - Social Media Sharing
  - Related Posts
  - Featured Posts
+ - Search Posts by Category
+ - Search Post by Section
+ - Search Post by Author
  - Author Bio
  - Newsletter signup
 
@@ -238,9 +238,16 @@ Following features are planned
  - dj-database-url==1.2.0
  - dj3-cloudinary-storage==0.0.6
  - Django==3.2.16
+ - django-allauth==0.51.0
+ - django-crispy-forms==1.14.0
+ - django-summernote==0.8.20.0
  - gunicorn==20.1.0
+ - oauthlib==3.2.2
  - psycopg2==2.9.5
+ - PyJWT==2.6.0
+ - python3-openid==3.2.0
  - pytz==2022.7
+ - requests-oauthlib==1.3.1
  - sqlparse==0.4.3
 
 ## Testing 
@@ -258,42 +265,36 @@ Functionality testing has been conducted by the author of the project together w
 
 ### Bugs during development
 
-There have been several small bugs during development. Most of them has been resolved by fixing faulty syntax but also a lot of them has been caused by logical errors. More sever bugs have been:
+There have been several small bugs during development. Most of them have been resolved by fixing faulty syntax but also a lot of them have been caused by logical errors. More sever bugs have been:
 
 - All users had admin rights
-  - Solution: Creating function that closes admin for non-staff users (Mentors)
-- Problems in getting a proper datestamp using date-selector in create session
-  - Solution: Creating a date-picker in widget.py and use widget in forms
-- Problem: Not allowing users to log in with only e-mail
-  - Solution: Scrapping auth user model and creating new custom user models based on BaseUserManager.
+  - Solution: Creating function that closes admin for non-staff users
 - Problem: Custom CSS not "active" on heroku
   - Solution: Set Collect Static to 0 and not use debug mode in settings.py
 
-Andy many more smaller ones that caused different types of errors but mostly were connected to bad syntax.
+And many more smaller ones, that caused different types of errors, but mostly were connected to bad syntax or typo.
 
 ### Validator Testing 
 
-Testing with https://validator.w3.org/ shows no errors on html:
+Testing with https://validator.w3.org/ showed no errors on html:
 
-![Validator testing](image)
+![Validator testing](/media/images-readme/screencapture-htmlvalidator.png)
 
 Testing with lighthouse gives the following results:
 
-![Validator testing](image)
+![Validator testing](/media/images-readme/validation-lighthouse.png)
 
 Testing and validating using pep8 validations tools:
 
-All python code in this project is not perfect. Some are showing errors of lines that are to long, especially in settings.py and in other files that are installed as part of django. The majority of the problems are not causing errors and are not from code that I actually wrote. Therefore it's not possible to produce a clean slate of a perfect record since some of the code is not perfect but still functional.
+All python code in this project is not perfect. Some are showing errors of lines that are too long, especially in settings.py and in other files that are installed as part of django. The majority of the problems are not causing errors and are not from code that was actually written by me.
 
-Testing with https://jigsaw.w3.org/css-validator/ shown no errors on CSS:
+Testing with https://jigsaw.w3.org/css-validator/ showed no errors on CSS:
 
-![Validator testing](image)
+![Validator testing](/media/images-readme/screencapture-cssvalidator.jpeg)
 
 ### Unfixed Bugs
 
-- Responsiveness is bad on smaller screens. Been trying to fix it but for some reason it is problematic.
-- Notes can't be created withouth choosing student, auto fill is not working correctly
-- Help modal sometimes shows up at bottom at screen, can't figure out why.
+- No bugs were left unfixed but yes things that I would like to have done differently, like writing the code for the time tables on the classes page using the proper bootstrap classes.
 
  [Back to top](#magnolia-tree-blog)
 

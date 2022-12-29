@@ -151,5 +151,3 @@ class BlogComment(models.Model):
         return reverse('post_detail', kwargs={'pk': self.pk})
 
 
-
-
